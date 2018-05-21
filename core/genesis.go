@@ -310,12 +310,11 @@ func GenesisBlockForTesting(db ethdb.Database, addr common.Address, balance *big
 func DefaultGenesisBlock() *Genesis {
 	return &Genesis{
 		Config:     params.MainnetChainConfig,
-		Nonce:      12,
-		ExtraData:  hexutil.MustDecode("0x31bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa"),
+		Timestamp:  1492009146,
+		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000c456e1d23b742e962dacb20a1d9e8e53e19f09910000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),
 		GasLimit:   4700000,
 		Difficulty: big.NewInt(1),
 		Alloc:		defaultMainPrealloc(),
-	//	Alloc:      decodePrealloc(mainnetAllocData),
 	}
 }
 
@@ -378,17 +377,7 @@ func decodePrealloc(data string) GenesisAlloc {
 	ga := make(GenesisAlloc, len(p))
 	for _, account := range p {
 		add := common.BigToAddress(account.Addr)
-		// if(add.String()=="0x00ACC6f082A442828764D11F58d6894AE408f073") {
-		// 	add = common.HexToAddress("0xc456e1d23b742e962dacb20a1d9e8e53e19f0991")
-		// }
-		
 		ga[add] = GenesisAccount{Balance: account.Balance}
-		// file, _ := os.OpenFile("E:/result.txt", os.O_WRONLY|os.O_APPEND, 0644)
-		// defer file.Close()
-		// file.WriteString(add.String())
-		// file.WriteString(":")
-		// file.WriteString(account.Balance.String())
-		// file.WriteString("\n")
 	}
 	return ga
 }
