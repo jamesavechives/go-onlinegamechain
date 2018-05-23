@@ -384,7 +384,11 @@ func decodePrealloc(data string) GenesisAlloc {
 
 func defaultMainPrealloc() GenesisAlloc {
 	ga := make(GenesisAlloc, 1)
-	ga[common.HexToAddress("0xc456e1d23b742e962dacb20a1d9e8e53e19f0991")] = GenesisAccount{Balance: big.NewInt(100000000000000)}
+	seed := big.NewInt( 3000000000000000 )
+	amount := seed.Mul(seed, big.NewInt(100000000000))
+
+	ga[common.HexToAddress("0xc456e1d23b742e962dacb20a1d9e8e53e19f0991")] = GenesisAccount{Balance: amount}
 	return ga
 }
+
 
