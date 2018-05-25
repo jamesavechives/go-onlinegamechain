@@ -24,22 +24,22 @@ import (
 )
 
 var (
-	MainnetGenesisHash = common.HexToHash("0x523e1f1673e8fc1d25651015012364122e0ff0587a39dda5fc3de0820202d5cc") // Mainnet genesis hash to enforce below configs on
+	MainnetGenesisHash = common.HexToHash("0xc637472371ac6b32e10f2543537c6457e07a8ab7b23c84bdd9e4032138d81403") // Mainnet genesis hash to enforce below configs on
 	TestnetGenesisHash = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d") // Testnet genesis hash to enforce below configs on
 )
 
 var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
-		ChainId:        big.NewInt(98),
-		HomesteadBlock: big.NewInt(1150000),
-		DAOForkBlock:   big.NewInt(1920000),
+		ChainId:        big.NewInt(0),
+		HomesteadBlock: nil,
+		DAOForkBlock:   nil,
 		DAOForkSupport: true,
-		EIP150Block:    big.NewInt(2463000),
+		EIP150Block:    nil,
 		EIP150Hash:     common.HexToHash("0x2086799aeebeae135c246c65021c82b4e15a2c451340993aacfd2751886514f0"),
-		EIP155Block:    big.NewInt(2675000),
-		EIP158Block:    big.NewInt(2675000),
-		ByzantiumBlock: big.NewInt(4370000),
+		EIP155Block:    nil,
+		EIP158Block:    nil,
+		ByzantiumBlock: nil,
 
 		Clique: &CliqueConfig{
 			Period: 15,

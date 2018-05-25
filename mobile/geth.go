@@ -80,7 +80,7 @@ var defaultNodeConfig = &NodeConfig{
 	BootstrapNodes:        FoundationBootnodes(),
 	MaxPeers:              25,
 	OnlinegamechainEnabled:       true,
-	OnlinegamechainNetworkID:     1,
+	OnlinegamechainNetworkID:     0,
 	OnlinegamechainDatabaseCache: 16,
 }
 
@@ -137,7 +137,7 @@ func NewNode(datadir string, config *NodeConfig) (stack *Node, _ error) {
 		// If we have the testnet, hard code the chain configs too
 		if config.OnlinegamechainGenesis == TestnetGenesis() {
 			genesis.Config = params.TestnetChainConfig
-			if config.OnlinegamechainNetworkID == 1 {
+			if config.OnlinegamechainNetworkID == 0 {
 				config.OnlinegamechainNetworkID = 3
 			}
 		}
