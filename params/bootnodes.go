@@ -20,8 +20,8 @@ package params
 // the main Onlinegamechain network.
 var MainnetBootnodes = []string{
 	// Onlinegamechain Foundation Go Bootnodes
-	 "enode://d5b6ab7a96e5809796ab8683fabacccd533cf239f009f5eac9d8aef0ef144b5ca9f97fd6083fab7f4ee5696b75ede28b38d8b28efba2ba566fbf3fdbb1940b40@119.29.209.227:30303", // TENCENT CLOUND
-
+	// "enode://d5b6ab7a96e5809796ab8683fabacccd533cf239f009f5eac9d8aef0ef144b5ca9f97fd6083fab7f4ee5696b75ede28b38d8b28efba2ba566fbf3fdbb1940b40@119.29.209.227:30303", // TENCENT CLOUND
+	"enode://14c80a63befe4afe1249a6e503c7e5d6612dea8f1b9253d0c5198c6815da0dd1eaf921d31b9cf48b15e1eed40f1e854b64d3be4a6206d7a4328bfbbddd3f73c6@3.15.214.124:30303",
 	// Onlinegamechain Foundation C++ Bootnodes
 	// "enode://979b7fa28feeb35a4741660a16076f1943202cb72b6af70d327f053e248bab9ba81760f39d0701ef1d8f89cc1fbd2cacba0710a12cd5314d5e0c9021aa3637f9@5.1.83.226:30303", // DE
 }
